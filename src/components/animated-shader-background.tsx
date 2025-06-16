@@ -6,6 +6,7 @@ const AnoAI = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    const container = containerRef.current;
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -87,11 +88,11 @@ const AnoAI = () => {
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-    let frameId: 19;
+    let frameId: number;
     const animate = () => {
       material.uniforms.iTime.value += 0.016;
       renderer.render(scene, camera);
-      frameId = window.requestAnimationFrame(animate) as unknown as 19;
+      frameId = requestAnimationFrame(animate);
     };
     animate();
 
@@ -104,7 +105,6 @@ const AnoAI = () => {
     return () => {
       cancelAnimationFrame(frameId);
       window.removeEventListener('resize', handleResize);
-
       geometry.dispose();
       material.dispose();
       renderer.dispose();
