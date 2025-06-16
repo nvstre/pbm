@@ -6,7 +6,6 @@ const AnoAI = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const container = containerRef.current;
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
