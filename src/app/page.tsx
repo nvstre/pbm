@@ -1,11 +1,14 @@
-import React from "react";
-import AnoAI from "@/components/animated-shader-background";
+"use client";
 
-export default function Home() {
-        return (
-          <div className="w-full h-screen bg-black">
-            <AnoAI/>
-          </div>
-        );
-      };
-      
+import React from "react";
+import { FloatingPathsBackground } from "@/components/floating-paths";
+
+export default function FloatingPathsBackgroundExample() {
+  return (
+    <FloatingPathsBackground
+      className="aspect-16/9 flex items-center justify-center"
+      position={-1}
+    >
+    </FloatingPathsBackground>
+  );
+}
