@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Hero } from "@/components/animated-hero";
 import { Navbar,NavBody,NavItems,MobileNav,MobileNavHeader,MobileNavMenu,MobileNavToggle,NavbarLogo,NavbarButton } from "@/components/resizable-navbar";
-import { BouncyCardsFeatures } from "@/components/bounce-card-feature";
+
 
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,10 +16,6 @@ export default function Page() {
     { name: "Pricing", link: "#pricing" },
     { name: "Contact", link: "#contact" },
   ];
-
- const DemoOne = () => {
-  return <BouncyCardsFeatures />;
-};
 
 
   return (
