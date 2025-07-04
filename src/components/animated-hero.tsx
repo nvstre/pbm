@@ -15,7 +15,7 @@ interface Message {
 
 export function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages] = useState<Message[]>([]);
   const titles = useMemo(
     () => ['life', 'opportunities', 'growth', 'potential', 'success'],
     []
