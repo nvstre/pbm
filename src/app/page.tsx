@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { Hero } from "@/components/animated-hero";
 import { Navbar,NavBody,NavItems,MobileNav,MobileNavHeader,MobileNavMenu,MobileNavToggle,NavbarLogo,NavbarButton } from "@/components/resizable-navbar";
+import { BouncyCardsFeatures } from "@/components/bounce-card-features";
+import Scroll from "@/components/sticky-scroll";
 
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -57,6 +59,8 @@ export default function Page() {
         </MobileNav>
       </Navbar>
       <Hero />
+      <BouncyCardsFeatures />
+      <Scroll />
     </div>
   );
 }

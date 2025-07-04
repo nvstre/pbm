@@ -31,7 +31,7 @@ export function Hero() {
   return (
     <div className="w-full">
       <div className="container mx-auto px-4">
-        <div className="flex gap-4 sm:gap-8 py-12 sm:py-20 lg:py-40 items-center justify-center flex-col">
+        <div className="flex gap-4  sm:gap-8 py-12 sm:py-20 lg:py-40 items-center justify-center flex-col">
           <div className="text-center">
             <a href="#blog">
             </a>
