@@ -2,7 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { MoveRight, Search, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import VideoPlayer from '@/components/video-player';
 
 
@@ -27,30 +27,7 @@ export function Hero() {
     }, 2000);
     return () => clearTimeout(timeoutId);
   }, [titleNumber, titles]);
-
-  const handleAIInputSubmit = async (value: string) => {
-    // Add user message
-    const userMessage: Message = {
-      id: Date.now(),
-      text: value,
-      sender: 'user',
-      timestamp: new Date()
-    };
-    setMessages(prev => [...prev, userMessage]);
-
-    // Simulate AI processing delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    // Add bot response
-    const botMessage: Message = {
-      id: Date.now() + 1,
-      text: "We don't have the current budget to help you!",
-      sender: 'bot',
-      timestamp: new Date()
-    };
-    setMessages(prev => [...prev, botMessage]);
-  };
-
+  
   return (
     <div className="w-full">
       <div className="container mx-auto px-4">
